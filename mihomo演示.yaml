@@ -1,9 +1,11 @@
-﻿# 机场订阅
+# 原作者项目 https://github.com/SilverWolfOfficial/clash-config/blob/main/clash-config.yaml
+ 
+ # 机场订阅
 
 proxy-providers:
   A机场:
     url: "A机场订阅填写在这里"
-    type: http
+    输入: http
     interval: 3600
     health-check:
       enable: true
@@ -257,3 +259,4 @@ rule-providers:
   facebook_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/facebook.mrs" }
   steamcdn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/IP/steamCDN-ip.mrs" }
   twitter_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/twitter.mrs" }
+
