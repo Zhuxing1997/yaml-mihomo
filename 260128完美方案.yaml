@@ -1,5 +1,6 @@
 # 原作者项目 https://github.com/SilverWolfOfficial/clash-config/blob/main/clash-config.yaml
 # 在原作者的基础上进行二改，目的在于精简
+# 本yaml适用于clash mi，实测在cmfa有点问题，介意者请离去
 proxy-providers:
   A机场:
     url: "A机场订阅填写在这里"
@@ -17,9 +18,11 @@ proxy-providers:
       enable: true
       url: "https://www.gstatic.com/generate_204"
       interval: 600
-
+      
+# 单节点按照正确格式录于此处
 proxies:
   - {name: 应急hk09, server: abc.com.cn, port: 55555, type: ss, cipher: aes-128-gcm, password: 4444444444, udp: true}
+  - {name: 应急SG 339, server: abc.com.cn, port: 55555, type: ss, cipher: aes-128-gcm, password: 4444444444, udp: true}
 
 port: 7890
 socks-port: 7891
