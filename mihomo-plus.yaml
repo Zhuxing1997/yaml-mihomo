@@ -110,7 +110,6 @@ rules:
   - RULE-SET,banad_domain,DIRECT
   - RULE-SET,private_domain,DIRECT
   - RULE-SET,bank_cn_domain,DIRECT
-  - RULE-SET,xiaomi_domain,DIRECT
   - RULE-SET,ai_cn_domain,DIRECT
   - RULE-SET,apple_cn_domain,DIRECT
   - RULE-SET,proxylite,一键代理
@@ -147,7 +146,6 @@ rule-providers:
   banad_domain: { <<: *domain, url: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/Domain/banAd.mrs" }
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs" }
   bank_cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-bank-cn.mrs" }
-  xiaomi_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/xiaomi.mrs" }
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/sev7enshare/Clash-Config/refs/heads/main/list/proxy.list" }
   anthropic_domain: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/anthropic.mrs" }
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
@@ -179,4 +177,5 @@ rule-providers:
   private_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs" }
   steamcdn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/IP/steamCDN-ip.mrs" }
   twitter_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/twitter.mrs" }
+
 
