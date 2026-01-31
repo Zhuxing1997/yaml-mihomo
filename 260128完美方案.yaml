@@ -1,6 +1,5 @@
 # 原作者项目 https://github.com/SilverWolfOfficial/clash-config/blob/main/clash-config.yaml
 # 在原作者的基础上进行二改，目的在于精简
-# 本yaml适用于clash mi，实测在cmfa有点问题，介意者请离去
 proxy-providers:
   A机场:
     url: "A机场订阅填写在这里"
@@ -20,6 +19,7 @@ proxy-providers:
       interval: 600
       
 # 单节点按照正确格式录于此处
+# 下面的是示例，采用本yaml时请删除示例节点，改为你自己的节点
 proxies:
   - {name: 应急hk09, server: abc.com.cn, port: 55555, type: ss, cipher: aes-128-gcm, password: 4444444444, udp: true}
   - {name: 应急SG 339, server: abc.com.cn, port: 55555, type: ss, cipher: aes-128-gcm, password: 4444444444, udp: true}
@@ -41,6 +41,7 @@ keep-alive-idle: 600
 keep-alive-interval: 15
 disable-keep-alive: false
 skip-auth-prefixes:
+  - 192.168.0.0/16
   - 127.0.0.1/32
   - ::1/128
 profile:
@@ -73,7 +74,7 @@ dns:
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "rule-set:private_domain,cn_domain,bank_cn_domain,ai_cn_domain,xiaomi_domain,media_cn_domain,apple_cn_domain,steam_cn_domain"
+    - "rule-set:private_domain,cn_domain,bank_cn_domain,ai_cn_domain,apple_cn_domain,steam_cn_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "time.*.com"
@@ -178,3 +179,4 @@ rule-providers:
   private_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs" }
   steamcdn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/rules/IP/steamCDN-ip.mrs" }
   twitter_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/twitter.mrs" }
+
